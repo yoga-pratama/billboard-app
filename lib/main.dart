@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:billboard_app/home/home.dart';
 
 void main() => runApp(MyApp());
 
@@ -54,7 +55,7 @@ class _MainPageState extends State<MainPage> {
           ),
           body: TabBarView(
             children: [
-              Text('Menu Home'),
+                HomePage(),
               Icon(Icons.directions_transit),
               Icon(Icons.directions_bike),
             ],
