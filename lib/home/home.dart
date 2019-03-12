@@ -1,4 +1,7 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 class HomePage extends StatefulWidget{
  
@@ -7,6 +10,9 @@ class HomePage extends StatefulWidget{
 }
 
 class _HomePage  extends State<HomePage>{
+  Completer<GoogleMapController> _controller = Completer();
+
+  
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
