@@ -37,18 +37,8 @@ class _HomePage extends State<HomePage> {
     return Column(
       children: <Widget>[
         Container(
-          height: mapHeight,
-          width: MediaQuery.of(context).size.width,
-          child: GoogleMap(
-            mapType: MapType.normal,
-            initialCameraPosition: _kGooglePlex,
-            compassEnabled: true,
-            onMapCreated: (GoogleMapController controller) {},
-          ),
-        ),
-        Container(
           alignment: Alignment.topLeft,
-          padding: EdgeInsets.only(top: 10, left: 10),
+          padding: EdgeInsets.only(top: 20, left: 10),
           child: Text(
             "Our Location",
             style: TextStyle(fontSize: 20),
@@ -73,7 +63,17 @@ class _HomePage extends State<HomePage> {
               );
             }).toList(),
           ),
-        )
+        ),
+          Container(
+          height: mapHeight,
+          width: MediaQuery.of(context).size.width,
+          child: GoogleMap(
+            mapType: MapType.normal,
+            initialCameraPosition: _kGooglePlex,
+            compassEnabled: true,
+            onMapCreated: (GoogleMapController controller) {},
+          ),
+        ),
       ],
     );
   }
